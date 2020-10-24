@@ -9,6 +9,7 @@ class App extends Component {
 
     this.state = {
       current :'0',
+      toReset: false
     }
   }
   reset = () => {
@@ -23,13 +24,19 @@ class App extends Component {
     }
   }
   addToCurrent = (symbol) => {
-      if ((this.state.current === "0" && symbol !== ".") || (this.state.toReset)){
+      if (this.state.current === "0" && symbol !== "."){
         this.setState({current:symbol});}
       else{
-        this.setState({current: this.state.current+symbol});}
+        if (this.state.toReset){
+          this.setState({current: symbol,toReset: false})
+        }
+        else {
+        this.setState({current: this.state.current+symbol});
+        }
+      }
     }
   calculate = (symbol) => {
-      this.setState({current : String(eval(this.state.current))});
+      this.setState({current : String(eval(this.state.current)),toReset: true});
     
   }
   render (){
