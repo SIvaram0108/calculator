@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: white;
+}
+.title {
+    text-align: center;
+}
+.floating-memory {
+    background-color: white;
+    text-align: right;
+    padding: 5px;
+    padding-right: 7px;
+    font-size: 20px;
+}
+.Calci-buttons {
+    width: 25%;
+    height: 60px;
+    border: 4px solid white;
+    font-size: 30px;
+}
+.width-50 {
+    width: 50%;
+}
+.btn-1 {
+    float: left;
+}
+.calc-box {
+    width: 33.33%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.result {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    border: 4px solid white;
+    font-size: 30px;
+    padding: 5px;
+}
+@media only screen and (max-width: 600px) {
+ 
+    .calc-box {
+      width: 100%;
+    }
+  }
+.typ-num {
+    background-color: #B0C4DE;
+}
+.typ-operator {
+    background-color: #1E90FF;
+}
+.typ-bck {
+    background-color: orangered;
+}
+.typ-clr {
+    background-color: chartreuse;
+}
